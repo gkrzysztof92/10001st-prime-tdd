@@ -1,6 +1,24 @@
 
 public class PrimeNumber {
 	
+	private long primeNumber;
+	private int index;
+	
+	public PrimeNumber(int index) {
+		
+		this.index = index;
+		setPrimeNumber(index);
+	}
+	
+	public void setPrimeNumber(int index) {
+		
+		this.primeNumber = findPrimeNumber(index);
+	}
+	
+	public long getPrimeNumber() {
+		return this.primeNumber;
+	}
+	
 	public static boolean isPrime(long number) {
 		
 		if (number < 2) {
