@@ -10,5 +10,10 @@ public class PrimeNumberTest {
 		assertTrue(PrimeNumber.isPrime(5));
 		assertFalse(PrimeNumber.isPrime(1));
 	}
+	
+	@Test
+	public void findPrimeNumber() {
+		assertEquals(11, PrimeNumber.findPrimeNumber(5));
+	}
 
 }
