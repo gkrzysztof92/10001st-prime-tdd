@@ -13,5 +13,21 @@ public class PrimeNumber {
 		}
 		return true;
 	}
+
+	public static long findPrimeNumber(int index) {
+		
+		long primeNumber = 0;
+		long currentNumber = 0;
+		long i = 0;
+		
+		while (i < index) {
+			if (isPrime(currentNumber)) {
+				primeNumber = currentNumber;
+				i++;
+			}
+			currentNumber++;
+		}
+		return primeNumber;
+	}
 	
 }
