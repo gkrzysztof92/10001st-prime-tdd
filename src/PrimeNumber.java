@@ -2,24 +2,31 @@
 public class PrimeNumber {
 	
 	private long primeNumber;
-	private int index;
+	private long index;
 	
-	public PrimeNumber(int index) {
+	public PrimeNumber(long index) {
 		
 		this.index = index;
 		setPrimeNumber(index);
 	}
 	
-	public void setPrimeNumber(int index) {
+	private void setPrimeNumber(long index) {
 		
 		this.primeNumber = findPrimeNumber(index);
 	}
 	
 	public long getPrimeNumber() {
+		
 		return this.primeNumber;
 	}
 	
-	public static boolean isPrime(long number) {
+	/**
+	 * Checks if number is prime
+	 * @param number - value to checked
+	 * @return return boolean value, if number is prime return true,
+	 * else return false
+	 */
+	public static boolean isPrimeNumber(long number) {
 		
 		if (number < 2) {
 			return false;
@@ -32,14 +39,14 @@ public class PrimeNumber {
 		return true;
 	}
 
-	public static long findPrimeNumber(int index) {
+	public static long findPrimeNumber(long index) {
 		
 		long primeNumber = 0;
 		long currentNumber = 0;
 		long i = 0;
 		
 		while (i < index) {
-			if (isPrime(currentNumber)) {
+			if (isPrimeNumber(currentNumber)) {
 				primeNumber = currentNumber;
 				i++;
 			}

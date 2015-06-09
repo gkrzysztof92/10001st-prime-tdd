@@ -2,13 +2,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
 public class PrimeNumberTest {
 
 	@Test
 	public void isPrime() {
-		assertTrue(PrimeNumber.isPrime(5));
-		assertFalse(PrimeNumber.isPrime(1));
+		assertTrue(PrimeNumber.isPrimeNumber(5));
+		assertFalse(PrimeNumber.isPrimeNumber(1));
 	}
 	
 	@Test
@@ -22,5 +21,4 @@ public class PrimeNumberTest {
 		assertEquals(29, test.getPrimeNumber());
 	}
 	
-
 }
